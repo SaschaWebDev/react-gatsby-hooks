@@ -58,6 +58,7 @@ gatsby develop
 - install with `npm install --save styled-components`
 - styled components are helpful to avoid inline styling that gets messy fast or create a css file for every component
 - styled components offer the features of Sass and the power of inline styling of javascript
+- They make the JSX clean and each element a reusable component, also the names are isolated to the single component so using the same name for styled components will not conflict
 - To make use of styled components in JSX you have to defined them under the React function like this
 
 ```
@@ -75,10 +76,13 @@ const ContentWrapper = styled.div`
 
 ## Sections
 
-- Top level have a Wrapper html element which is full width of the screen and has `position: relative`. It is responsible for the background and can have floating backgrounds.
-- Within the Wrapper ist a ContentWrapper that is centered to the screen and has some padding to the left and right
-- Keep in mind that sections also have margins on the y axis between each other but they don't add up. Making an upper section marginBottom 200px and the lower section marginTop 200px results in the margin still being 200px. Padding in contrast will add up on each other.
+- top level have a Wrapper html element which is full width of the screen and has `position: relative`. It is responsible for the background and can have floating backgrounds.
+- within the Wrapper ist a ContentWrapper that is centered to the screen and has some padding to the left and right
+- keep in mind that sections also have margins on the y axis between each other but they don't add up. Making an upper section marginBottom 200px and the lower section marginTop 200px results in the margin still being 200px. Padding in contrast will add up on each other.
 
 ![](designcodeweb/public/images/learnings/sections-structure.PNG)
 
+## CSS Grid
+
+- using `display: grid; gap: 30px;` is superior to using margins since it will work responsive on many display sizes
 -
